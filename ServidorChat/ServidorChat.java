@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class ServidorChat {
 
-    private static final int PORTA = 12345;
+    private static final int PORTA = 5000;
 
     static void main(String[] args) {
         System.out.println("Servidor de Chat iniciado na porta " + PORTA + "...");

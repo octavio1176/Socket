@@ -42,7 +42,7 @@ public class ClienteChat {
             }
 
             socket.close();
-        } catch (IOException e) {
+        }   catch (IOException e) {
             System.out.println("Erro ao conectar ao servidor. Verifica se o servidor está a correr.");
         }
     }
