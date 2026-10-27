@@ -15,10 +15,13 @@ public class GerenciadorClientes {
     public static synchronized void remover(PrintWriter cliente) {
         clientes.remove(cliente);
     }
+    public static synchronized void broadcast(
+            String mensagem, PrintWriter remetente) {
 
-    public static synchronized void broadcast(String mensagem) {
         for (PrintWriter cliente : clientes) {
-            cliente.println(mensagem);
+            if (cliente != remetente) {
+                cliente.println(mensagem);
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ public class ClientHandler implements Runnable {
             String mensagem;
             while ((mensagem = in.readLine()) != null) {
                 System.out.println("Mensagem recebida: " + mensagem);
-                GerenciadorClientes.broadcast(mensagem);
+                GerenciadorClientes.broadcast(mensagem, out);
             }
         } catch (IOException e) {
             System.out.println("Cliente desconectado.");
